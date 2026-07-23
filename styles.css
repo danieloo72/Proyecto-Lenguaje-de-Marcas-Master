@@ -1,6 +1,3 @@
-/* ==========================================
-   1. RESET BÁSICO
-   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -28,9 +25,6 @@ a {
     color: inherit;
 }
 
-/* ==========================================
-   2. VARIABLES CSS
-   ========================================== */
 :root {
     --principal: #0033aa;
     --secundario: #cc0000;
@@ -40,9 +34,6 @@ a {
     --fondo-oscuro: #222222;
 }
 
-/* ==========================================
-   3. ESTILOS GENERALES Y CONTENEDORES
-   ========================================== */
 .container {
     width: 90%;
     max-width: 1000px;
@@ -56,9 +47,6 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* ==========================================
-   4. HEADER Y NAVEGACIÓN (FLEXBOX)
-   ========================================== */
 .main-header {
     background-color: var(--principal);
     color: var(--blanco);
@@ -86,9 +74,6 @@ h2 {
     color: var(--secundario);
 }
 
-/* ==========================================
-   5. SECCIÓN HERO (INICIO)
-   ========================================== */
 .hero-section {
     background-color: var(--principal);
     color: var(--blanco);
@@ -105,9 +90,6 @@ h2 {
     font-size: 1.2rem;
 }
 
-/* ==========================================
-   6. SECCIÓN SOBRE MÍ
-   ========================================== */
 .about-section {
     background-color: var(--blanco);
 }
@@ -117,9 +99,6 @@ h2 {
     text-align: center;
 }
 
-/* ==========================================
-   7. SECCIÓN PORTAFOLIO (CSS GRID)
-   ========================================== */
 .portfolio-section {
     background-color: var(--fondo);
 }
@@ -152,9 +131,6 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* ==========================================
-   8. SECCIÓN CONTACTO
-   ========================================== */
 .contact-section {
     background-color: var(--blanco);
 }
@@ -204,9 +180,6 @@ h2 {
     background-color: var(--secundario);
 }
 
-/* ==========================================
-   9. FOOTER
-   ========================================== */
 .main-footer {
     background-color: var(--fondo-oscuro);
     color: var(--blanco);
@@ -214,14 +187,12 @@ h2 {
     padding: 1.5rem;
 }
 
-/* Tablets (Pantallas medianas) */
 @media (max-width: 900px) {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Móviles (Pantallas pequeñas) */
 @media (max-width: 600px) {
     .main-header {
         flex-direction: column;
