@@ -1,22 +1,17 @@
 /* ==========================================
-   1. RESET & NORMALIZE
+   1. RESET BÁSICO
    ========================================== */
-*, *::before, *::after {
-    box-sizing: border-box;
+* {
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-light);
+    color: var(--texto);
+    background-color: var(--fondo);
 }
 
 img {
@@ -34,315 +29,210 @@ a {
 }
 
 /* ==========================================
-   2. VARIABLES (CSS VARIABLES)
+   2. VARIABLES CSS
    ========================================== */
 :root {
-    --primary-color: #0033aa;     /* Azul Superman */
-    --secondary-color: #cc0000;   /* Rojo Capa */
-    --accent-color: #ffcc00;      /* Amarillo Emblema */
-    --text-color: #222222;
-    --text-light: #ffffff;
-    --bg-light: #f4f6f9;
-    --bg-dark: #111111;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --principal: #0033aa;
+    --secundario: #cc0000;
+    --texto: #333333;
+    --blanco: #ffffff;
+    --fondo: #f4f4f4;
+    --fondo-oscuro: #222222;
 }
 
 /* ==========================================
-   3. UTILITIES / REUSABLE
+   3. ESTILOS GENERALES Y CONTENEDORES
    ========================================== */
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 h2 {
     text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    position: relative;
-    color: var(--primary-color);
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    margin: 10px auto 0 auto;
-}
-
-/* ==========================================
-   4. HEADER & NAV (FLEXBOX)
-   ========================================== */
-.main-header {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.logo {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-.logo strong {
-    color: var(--accent-color);
-}
-
-.main-nav ul {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.main-nav a {
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: var(--accent-color);
-}
-
-/* ==========================================
-   5. HERO SECTION
-   ========================================== */
-.hero-section {
-    background: linear-gradient(rgba(0, 51, 170, 0.7), rgba(17, 17, 17, 0.85)), 
-                url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&auto=format&fit=crop&q=80') no-repeat center center/cover;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--text-light);
-    padding: 0 1rem;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-}
-
-.hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-primary {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    padding: 0.8rem 2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-}
-
-.btn-primary:hover {
-    background-color: #990000;
-    transform: translateY(-2px);
-}
-
-/* ==========================================
-   6. SOBRE MÍ
-   ========================================== */
-.about-section {
-    background-color: var(--text-light);
-}
-
-.about-text {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.15rem;
-}
-
-.about-text p {
+    color: var(--principal);
     margin-bottom: 1.5rem;
 }
 
 /* ==========================================
-   7. PORTAFOLIO (CSS GRID)
+   4. HEADER Y NAVEGACIÓN (FLEXBOX)
+   ========================================== */
+.main-header {
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav a {
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: var(--secundario);
+}
+
+/* ==========================================
+   5. SECCIÓN HERO (INICIO)
+   ========================================== */
+.hero-section {
+    background-color: var(--principal);
+    color: var(--blanco);
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* ==========================================
+   6. SECCIÓN SOBRE MÍ
+   ========================================== */
+.about-section {
+    background-color: var(--blanco);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* ==========================================
+   7. SECCIÓN PORTAFOLIO (CSS GRID)
    ========================================== */
 .portfolio-section {
-    background-color: var(--bg-light);
+    background-color: var(--fondo);
 }
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 .portfolio-item {
-    background-color: var(--text-light);
-    border-radius: 8px;
+    background-color: var(--blanco);
+    border: 1px solid #ddd;
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
 }
 
 .portfolio-item img {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
 }
 
 .portfolio-info {
-    padding: 1.2rem;
+    padding: 1rem;
 }
 
 .portfolio-info h3 {
+    color: var(--principal);
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
-}
-
-.portfolio-info p {
-    font-size: 0.95rem;
-    color: #555;
 }
 
 /* ==========================================
-   8. CONTACTO
+   8. SECCIÓN CONTACTO
    ========================================== */
 .contact-section {
-    background-color: var(--text-light);
+    background-color: var(--blanco);
 }
 
 .contact-form {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
-    background-color: var(--bg-light);
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: var(--card-shadow);
+    background-color: var(--fondo);
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: var(--principal);
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: inherit;
-    font-size: 1rem;
-}
-
-.form-group input:focus, 
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
 }
 
 .btn-submit {
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: var(--principal);
+    color: var(--blanco);
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-    transition: background 0.3s ease;
 }
 
 .btn-submit:hover {
-    background-color: #002277;
+    background-color: var(--secundario);
 }
 
 /* ==========================================
    9. FOOTER
    ========================================== */
 .main-footer {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: var(--fondo-oscuro);
+    color: var(--blanco);
     text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
+    padding: 1.5rem;
 }
 
-.social-links {
-    margin-top: 0.5rem;
-}
-
-.social-links a {
-    color: var(--accent-color);
-    margin: 0 0.5rem;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-/* ==========================================
-   10. DISEÑO RESPONSIVE (MEDIA QUERIES)
-   ========================================== */
-
-/* Tablets (Pantallas menores de 992px) */
-@media (max-width: 992px) {
+/* Tablets (Pantallas medianas) */
+@media (max-width: 900px) {
     .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* Pasa de 4 a 2 columnas */
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Móviles (Pantallas menores de 600px) */
+/* Móviles (Pantallas pequeñas) */
 @media (max-width: 600px) {
     .main-header {
-        flex-direction: column; /* Apila logo y navegación */
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .main-nav ul {
-        gap: 1rem;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .portfolio-grid {
-        grid-template-columns: 1fr; /* Pasa a 1 sola columna */
+        grid-template-columns: 1fr;
     }
 
     .hero-content h1 {
         font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .contact-form {
-        padding: 1.5rem;
     }
 }

@@ -1,13 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-    
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Clark Kent. Periodista de día, salvador del mundo de noche.">
+    <meta name="author" content="Clark Kent">
+    <meta name="keywords" content="Portafolio, HTML, CSS, Superhéroe">
+    <title>Clark Kent | Portafolio Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <strong>S</strong>-Portfolio
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#portfolio">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Soluciones Rápidas</h1>
+                <p>Periodista multitarea y héroe disponible para misiones urgentes a nivel global.</p>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Sobre Mí</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Hola, soy Clark Kent. Aunque la mayor parte del tiempo me dedico a redactar artículos para el Daily Planet, mi verdadera pasión es ayudar a la comunidad y proteger a todas las personas.</p>
+                        <p>Tengo una alta tolerancia al estrés, capacidad de volar para asistir a reuniones presenciales de inmediato y una visión de rayos X ideal para detectar bugs o fallos antes de que se conviertan en un problema real.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2>Mis Proyectos Recientes</h2>
+                <div class="portfolio-grid">
+                    
+                    <article class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?w=500&auto=format&fit=crop&q=60" alt="Miniatura del Proyecto Rescate en Órbita">
+                        <div class="portfolio-info">
+                            <h3>Operación Satélite</h3>
+                            <p>Reubicación y calibración de comunicación en órbita baja sin interrumpir el servicio.</p>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&auto=format&fit=crop&q=60" alt="Miniatura del Proyecto Cobertura de Prensa">
+                        <div class="portfolio-info">
+                            <h3>Crónicas de Metrópolis</h3>
+                            <p>Redacción de una serie de artículos de investigación ganadores de deportes locales.</p>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1597839219216-a773cb2473e4?w=500&auto=format&fit=crop&q=60" alt="Miniatura del Proyecto Seguridad en Fortaleza">
+                        <div class="portfolio-info">
+                            <h3>Cifrado de Servidores</h3>
+                            <p>Implementación de un sistema de seguridad térmico para archivos confidenciales.</p>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=500&auto=format&fit=crop&q=60" alt="Miniatura del Proyecto Control de Daños">
+                        <div class="portfolio-info">
+                            <h3>Mitigación de Riesgos</h3>
+                            <p>Desvío de trayectorias meteorológicas para la protección de edificios en malas condiciones.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>¿Tienes una emergencia? Contacta</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe la situación o el proyecto..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Clark Kent Portfolio.</p>
+    </footer>
+
+</body>
 </html>
